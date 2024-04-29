@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+   
+    <title>timer app</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+      body {
+        background-color: whitesmoke;
+      }
+      .rootdiv {
+        font-family: "Noto Sans Mono", monospace;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+      }
+
+      .scramblediv{
+        font-size: 30px;
+        height: 20vh;
+        text-align: center;
+      }
+
+      .timerdiv {
+        font-size: 20vmin;
+        font-weight: 400;
+        height: 40vh;
+        text-align: center;
+      }
+
+      .infodiv {
+        font-size: 30px;
+        height: 10vh;
+        min-height: 10vh;
+        text-align: center;
+      }
+
+      .sbutton {
+        background-color: whitesmoke;
+        font-family: "Noto Sans Mono", monospace;
+        border: 2px solid whitesmoke;
+        color: black;
+        font-size: 30px;
+        height: 200%;
+
+        transition-duration: 0.1s;
+      }
+
+      .sbutton:hover {
+        font-weight: 600;
+        border: 2px solid black;
+      }
+      .sbutton:active {
+        background-color: black;
+        color: whitesmoke;
+      }
+
+
+      #infocanvas {
+        width: 100%;
+        height: 100%;
+        border: 0px solid black;
+      }
+
+      hr {
+        width: 0%
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="testdiv" id="testdiv">This is for testing purposes.</div>
+    <div class="rootdiv">
+      <div class="scramblediv" id="scramblediv">R2 L2 U2 D2 F2 B2 M2 E2 S2</div>
+      <div class="timerdiv" id="timerdiv">0.000</div>
+      <div class="infodiv" id="infodiv">
+        <div class="buttonsdiv">
+          <button class = "sbutton" id="okbutton" tabindex = "-1" onclick="handleButtonPress('ok')">OK</button>
+          <button class = "sbutton" id="plus2button" tabindex = "-1" onclick="handleButtonPress('+2')">+2</button>
+          <button class = "sbutton" id="dnfbutton" tabindex = "-1" onclick="handleButtonPress('dnf')">DNF</button>
+          <button class = "sbutton" id="removebutton" tabindex = "-1" onclick="handleButtonPress('x')">Remove</button>
+        </div>
+        <div class="averagesdiv" id="averagesdiv">ao5 DNF</div>
+        <canvas id="infocanvas"></canvas>       
+        </div>
+      </div>
+     
+    </div>
+
+    <script src="timerpage.js"></script>
+  </body>
+</html>

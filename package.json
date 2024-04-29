@@ -4,6 +4,7 @@
   "description": "Speedcubing timer application",
   "main": "main.js",
   "scripts": {
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Lrelni/lrtimer/issues"
   },
-  "homepage": "https://github.com/Lrelni/lrtimer#readme"
+  "homepage": "https://github.com/Lrelni/lrtimer#readme",
+  "dependencies": {
+    "electron": "^30.0.1"
+  }
 }
